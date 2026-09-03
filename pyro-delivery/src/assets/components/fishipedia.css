@@ -1,0 +1,362 @@
+.fishipedia,
+.delivery {
+	width: min(72rem, 92vw);
+	margin: 2.5rem auto;
+	min-width: 0;
+	color: #e8eadf;
+}
+
+.fishipedia__header,
+.delivery__header {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.eyebrow {
+	margin: 0 0 0.5rem;
+	color: #d4a94b;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+	margin-top: 0;
+}
+
+.fishipedia h1,
+.delivery h1 {
+	margin-bottom: 0.6rem;
+	color: #f5f4e9;
+	font: 700 clamp(2.2rem, 6vw, 4.5rem) / 0.95 Georgia, serif;
+}
+
+.fishipedia__intro,
+.delivery__intro {
+	max-width: 35rem;
+	margin-bottom: 0;
+	color: #a8aea2;
+	line-height: 1.6;
+}
+
+.fishipedia__count {
+	display: grid;
+	min-width: 7rem;
+	padding: 0.8rem 1rem;
+	border-left: 2px solid #d4a94b;
+}
+
+.fishipedia__count strong {
+	color: #f5f4e9;
+	font-size: 1.8rem;
+}
+
+.fishipedia__count span,
+.fish-card__topline,
+.rarity-rate {
+	color: #92998d;
+	font-size: 0.78rem;
+}
+
+.rarity-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin-bottom: 1.5rem;
+}
+
+.rarity-rate {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.5rem 0.7rem;
+	border: 1px solid #333b35;
+	border-radius: 0.25rem;
+}
+
+.rarity-rate strong {
+	margin-left: 0.25rem;
+	color: #e8eadf;
+}
+
+.rarity-dot {
+	width: 0.55rem;
+	height: 0.55rem;
+	border-radius: 50%;
+	background: #aaa;
+}
+
+.rarity-dot--bronze,
+.rarity-label--bronze { background-color: #a9784f; }
+.rarity-dot--silver,
+.rarity-label--silver { background-color: #aeb9bd; }
+.rarity-dot--gold,
+.rarity-label--gold { background-color: #d4a94b; }
+.rarity-dot--diamond,
+.rarity-label--diamond { background-color: #66c7d8; }
+.rarity-dot--platinum,
+.rarity-label--platinum { background-color: #a8a0d4; }
+.rarity-dot--mythical,
+.rarity-label--mythical { background-color: #d17a9b; }
+
+.fish-controls {
+	display: flex;
+	align-items: end;
+	gap: 0.8rem;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	border: 1px solid #333b35;
+	border-radius: 0.3rem;
+	background: #1d221f;
+}
+
+.fish-controls label {
+	display: grid;
+	flex: 1;
+	gap: 0.4rem;
+	color: #b8beb2;
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+.fish-controls input,
+.fish-controls select {
+	min-width: 0;
+	padding: 0.65rem 0.7rem;
+	border: 1px solid #3a443c;
+	border-radius: 0.2rem;
+	color: #f5f4e9;
+	background: #191d1b;
+	font: inherit;
+}
+
+.fish-controls input:focus,
+.fish-controls select:focus {
+	outline: 2px solid #d4a94b;
+	outline-offset: 1px;
+}
+
+.fish-results {
+	min-width: max-content;
+	margin: 0 0 0.7rem;
+	color: #92998d;
+	font-size: 0.75rem;
+}
+
+.fish-no-results {
+	grid-column: 1 / -1;
+	padding: 3rem 1rem;
+	border: 1px dashed #465247;
+	color: #a8aea2;
+	text-align: center;
+}
+
+.fish-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+	gap: 0.8rem;
+}
+
+.fish-card {
+	position: relative;
+	padding: 1rem;
+	border: 1px solid #2b322d;
+	border-radius: 0.3rem;
+	background: #222724;
+	transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.fish-card:hover {
+	border-color: #3b473d;
+	transform: translateY(-1px);
+}
+
+.fish-card:hover,
+.fish-card:focus-within {
+	z-index: 3;
+}
+
+.fish-card__topline {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 0;
+	gap: 0.5rem;
+}
+
+.biome-details {
+	position: relative;
+	min-width: 0;
+	color: #92998d;
+	font-size: 0.78rem;
+}
+
+.biome-details summary {
+	padding: 0.3rem 0.35rem;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	list-style: none;
+}
+
+.biome-details summary:hover {
+	color: #e8eadf;
+	background: #303a31;
+}
+
+.biome-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.biome-details summary::after {
+	margin-left: 0.35rem;
+	color: #d4a94b;
+	content: '+';
+	font-size: 0.95rem;
+}
+
+.biome-details[open] summary::after {
+	content: '-';
+}
+
+.biome-details summary:focus-visible {
+	outline: 2px solid #d4a94b;
+	outline-offset: 2px;
+}
+
+.biome-details__panel {
+	position: absolute;
+	top: calc(100% + 0.55rem);
+	right: 0;
+	z-index: 2;
+	width: min(14rem, 70vw);
+	padding: 0.8rem;
+	border: 1px solid #465247;
+	border-radius: 0.25rem;
+	background: #191d1b;
+	box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
+.biome-details__panel strong {
+	color: #f5f4e9;
+	font-size: 0.75rem;
+}
+
+.biome-details__panel ul {
+	display: grid;
+	gap: 0.3rem;
+	max-height: 11rem;
+	margin: 0.6rem 0 0;
+	padding-left: 1rem;
+	overflow-y: auto;
+	color: #a8aea2;
+	font-size: 0.75rem;
+	line-height: 1.35;
+}
+
+.biome-details__excluded {
+	color: #786f68;
+	font-style: italic;
+}
+
+.rarity-label {
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.15rem;
+	color: #172019;
+	font-size: 0.65rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.fish-card h2 {
+	margin: 1rem 0 0.5rem;
+	color: #f5f4e9;
+	font-size: 1.15rem;
+}
+
+.fish-card p {
+	margin-bottom: 0;
+	color: #9ca59a;
+	font-size: 0.83rem;
+	line-height: 1.55;
+}
+
+.best-biome {
+	display: grid;
+	gap: 0.25rem;
+	margin-top: 1rem;
+	padding-top: 0.8rem;
+	border-top: 1px solid #303831;
+}
+
+.best-biome__label {
+	color: #d4a94b;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.best-biome strong {
+	overflow: hidden;
+	color: #f5f4e9;
+	font-size: 0.95rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.best-biome__rate {
+	color: #92998d;
+	font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+	.fishipedia__header,
+	.delivery__header {
+		display: block;
+	}
+
+	.fishipedia__count,
+	.delivery__status {
+		display: inline-flex;
+		margin-top: 1.25rem;
+	}
+
+	.fish-controls {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.fish-results {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 420px) {
+	.fishipedia,
+	.delivery {
+		width: min(100% - 1.25rem, 72rem);
+		margin-top: 1.5rem;
+	}
+
+	.fishipedia__header,
+	.delivery__header {
+		margin-bottom: 1.5rem;
+	}
+
+	.fishipedia h1,
+	.delivery h1 {
+		font-size: 2.4rem;
+	}
+
+	.fish-card,
+	.delivery-form,
+	.delivery-results {
+		padding: 0.85rem;
+	}
+}

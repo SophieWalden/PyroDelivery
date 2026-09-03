@@ -1,0 +1,18 @@
+:host, body{
+  margin: 0;
+  background-color: rgb(28, 28, 31);
+  color: #1E2F23;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 0;
+  width: 100%;
+}
