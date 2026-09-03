@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sophiewalden.github.io/pyro-delivery/",
+  "homepage": "https://sophiewalden.github.io/PyroDelivery/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
