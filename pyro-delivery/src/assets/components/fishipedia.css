@@ -1,6 +1,6 @@
 .fishipedia,
 .delivery {
-	width: min(72rem, 92vw);
+	width: min(84rem, 94vw);
 	margin: 2.5rem auto;
 	min-width: 0;
 	color: #e8eadf;
@@ -110,7 +110,7 @@ p {
 	align-items: end;
 	gap: 0.8rem;
 	margin-bottom: 1.5rem;
-	padding: 1rem;
+	padding: 1.15rem;
 	border: 1px solid #333b35;
 	border-radius: 0.3rem;
 	background: #1d221f;
@@ -159,13 +159,13 @@ p {
 
 .fish-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-	gap: 0.8rem;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 1rem;
 }
 
 .fish-card {
 	position: relative;
-	padding: 1rem;
+	padding: 1.1rem;
 	border: 1px solid #2b322d;
 	border-radius: 0.3rem;
 	background: #222724;

@@ -13,8 +13,19 @@ function Fishipedia({ data }) {
 	const fish = Object.values(data.fish)
 	const rarityRates = Object.entries(data.rarity_rates)
 	const getFishBiomes = (entry) => entry.biomes.filter((biome) => !EXCLUDED_BIOMES.has(biome))
+	const biomes = fish.reduce((biomes, entry) => {
+		getFishBiomes(entry).forEach((biome) => {
+			if (!biomes.includes(biome) && biome != "All Biomes"){
+				biomes.push(biome)
+			}
+		})
+
+		return biomes.sort((a, b) => a.localeCompare(b))
+	}, []);
+
 	const [searchTerm, setSearchTerm] = useState('')
 	const [rarityFilter, setRarityFilter] = useState('all')
+	const [biomeFilter, setBiomeFilter] = useState('all');
 	const [sortBy, setSortBy] = useState('rarity')
 	const biomePools = fish.reduce((pools, entry) => {
 		getFishBiomes(entry).forEach((biome) => {
@@ -39,7 +50,8 @@ function Fishipedia({ data }) {
 		.filter((entry) => {
 			const matchesName = entry.name.toLowerCase().includes(searchTerm.toLowerCase())
 			const matchesRarity = rarityFilter === 'all' || entry.rarity === rarityFilter
-			return matchesName && matchesRarity
+			const matchesBiome = biomeFilter === 'all' || entry.biomes.includes(biomeFilter)
+			return matchesName && matchesRarity && matchesBiome
 		})
 		.sort((first, second) => {
 			if (sortBy === 'rarity') {
@@ -93,6 +105,15 @@ function Fishipedia({ data }) {
 						<option value="all">All rarities</option>
 						{rarityRates.map(([rarity]) => (
 							<option value={rarity} key={rarity}>{rarity}</option>
+						))}
+					</select>
+				</label>
+				<label>
+					<span>Biome</span>
+					<select value={biomeFilter} onChange={(event) => setBiomeFilter(event.target.value)}>
+						<option value="all">All Biomes</option>
+						{biomes.map((biome) => (
+							<option value={biome} key={biome}>{biome}</option>
 						))}
 					</select>
 				</label>

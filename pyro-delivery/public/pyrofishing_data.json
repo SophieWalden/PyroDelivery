@@ -148,7 +148,7 @@
         "Plains",
         "Stony Shore",
         "Swamp",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Chaos Fish": {
@@ -289,7 +289,7 @@
       "name": "Mud Shark",
       "rarity": "Bronze",
       "biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Lush Caves",
         "Sparse Jungle",
         "Bamboo Jungle"
@@ -354,7 +354,7 @@
         "Jungle",
         "Swamp",
         "Bamboo Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River"
       ]
     },
@@ -390,7 +390,7 @@
       "biomes": [
         "Bamboo Jungle",
         "Sparse Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Badlands",
         "Lush Caves"
       ]
@@ -447,7 +447,7 @@
         "Dripstone Caves",
         "Deep Dark",
         "Swamp",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Space Dolphin": {
@@ -635,7 +635,7 @@
         "Bamboo Jungle",
         "River",
         "Swamp",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Sparse Jungle"
       ]
     },
@@ -832,7 +832,7 @@
         "Dark Forest",
         "Lush Caves",
         "Swamp",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Pale Garden"
       ]
     },
@@ -946,7 +946,7 @@
       "rarity": "Gold",
       "biomes": [
         "Swamp",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River"
       ]
     },
@@ -1094,7 +1094,7 @@
         "Badlands",
         "Swamp",
         "Eroded Badlands",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Obsidifish": {
@@ -1246,7 +1246,7 @@
         "River",
         "Stony Shore",
         "Swamp",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Bumblebee Tuna": {
@@ -1258,7 +1258,7 @@
         "Windswept Forest",
         "Meadow",
         "Jungle",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Chelicerate": {
@@ -1847,7 +1847,7 @@
       "biomes": [
         "River",
         "Swamp",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Corpulent Lucas": {
@@ -1872,7 +1872,8 @@
       "name": "Enigmatic Dapper",
       "rarity": "Mythical",
       "biomes": [
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp",
+        "Swamp"
       ]
     },
     "Cursed Katfish": {
@@ -1928,7 +1929,7 @@
         "Badlands",
         "Eroded Badlands",
         "Jungle",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ]
     },
     "Lethal Kraken": {
@@ -2917,11 +2918,6 @@
       ]
     },
     "Mangrove Swamp": {
-      "Platinum": [
-        "Reaper Leviathan"
-      ]
-    },
-    "Mangrove Swamp Swamp": {
       "Bronze": [
         "Catfish",
         "Mud Shark",
@@ -2940,6 +2936,9 @@
       "Diamond": [
         "Boss Bass",
         "Bumblebee Tuna"
+      ],
+      "Platinum": [
+        "Reaper Leviathan"
       ],
       "Mythical": [
         "Bumblebee Goby",
@@ -3545,6 +3544,7 @@
       ],
       "Mythical": [
         "Confused Junior",
+        "Enigmatic Dapper",
         "Grunttin Leachy"
       ]
     },
@@ -8718,23 +8718,6 @@
       }
     },
     "Mangrove Swamp": {
-      "Platinum": {
-        "base_rarity_rate": 0.002,
-        "base_rarity_rate_percent": 0.2,
-        "fish_count": 1,
-        "fish": [
-          {
-            "name": "Reaper Leviathan",
-            "pool_share": 1.0,
-            "pool_share_percent": 100.0,
-            "overall_rate": 0.002,
-            "overall_rate_percent": 0.2,
-            "one_in": 500.0
-          }
-        ]
-      }
-    },
-    "Mangrove Swamp Swamp": {
       "Bronze": {
         "base_rarity_rate": 0.6,
         "base_rarity_rate_percent": 60.0,
@@ -8848,6 +8831,21 @@
             "overall_rate": 0.005,
             "overall_rate_percent": 0.5,
             "one_in": 200.0
+          }
+        ]
+      },
+      "Platinum": {
+        "base_rarity_rate": 0.002,
+        "base_rarity_rate_percent": 0.2,
+        "fish_count": 1,
+        "fish": [
+          {
+            "name": "Reaper Leviathan",
+            "pool_share": 1.0,
+            "pool_share_percent": 100.0,
+            "overall_rate": 0.002,
+            "overall_rate_percent": 0.2,
+            "one_in": 500.0
           }
         ]
       },
@@ -12142,23 +12140,31 @@
       "Mythical": {
         "base_rarity_rate": 0.0004,
         "base_rarity_rate_percent": 0.04,
-        "fish_count": 2,
+        "fish_count": 3,
         "fish": [
           {
             "name": "Confused Junior",
-            "pool_share": 0.5,
-            "pool_share_percent": 50.0,
-            "overall_rate": 0.0002,
-            "overall_rate_percent": 0.02,
-            "one_in": 5000.0
+            "pool_share": 0.333333333333,
+            "pool_share_percent": 33.3333333333,
+            "overall_rate": 0.000133333333,
+            "overall_rate_percent": 0.0133333333,
+            "one_in": 7500.0
+          },
+          {
+            "name": "Enigmatic Dapper",
+            "pool_share": 0.333333333333,
+            "pool_share_percent": 33.3333333333,
+            "overall_rate": 0.000133333333,
+            "overall_rate_percent": 0.0133333333,
+            "one_in": 7500.0
           },
           {
             "name": "Grunttin Leachy",
-            "pool_share": 0.5,
-            "pool_share_percent": 50.0,
-            "overall_rate": 0.0002,
-            "overall_rate_percent": 0.02,
-            "one_in": 5000.0
+            "pool_share": 0.333333333333,
+            "pool_share_percent": 33.3333333333,
+            "overall_rate": 0.000133333333,
+            "overall_rate_percent": 0.0133333333,
+            "one_in": 7500.0
           }
         ]
       }
@@ -15088,14 +15094,14 @@
       "base_rarity_rate": 0.01,
       "base_rarity_rate_percent": 1.0,
       "biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Mushroom Fields",
         "River",
         "Stony Shore",
         "Swamp"
       ],
       "best_biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Mushroom Fields",
         "River",
         "Stony Shore",
@@ -15145,7 +15151,7 @@
           "one_in": 200.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -15297,7 +15303,7 @@
         "Badlands",
         "Eroded Badlands",
         "Jungle",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ],
       "best_biomes": [
         "Badlands",
@@ -15338,7 +15344,7 @@
           "one_in": 7500.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 3,
           "pool_share": 0.333333333333,
           "pool_share_percent": 33.3333333333,
@@ -15357,14 +15363,14 @@
         "Birch Forest",
         "Forest",
         "Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Meadow",
         "Windswept Forest"
       ],
       "best_biomes": [
         "Birch Forest",
         "Forest",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Windswept Forest"
       ],
       "best_pool_size": 2,
@@ -15420,7 +15426,7 @@
           "one_in": 400.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -15437,7 +15443,7 @@
       "base_rarity_rate_percent": 60.0,
       "biomes": [
         "Beach",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Plains",
         "River",
         "Stony Shore",
@@ -15445,7 +15451,7 @@
       ],
       "best_biomes": [
         "Beach",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Plains",
         "Stony Shore",
         "Swamp"
@@ -15503,7 +15509,7 @@
           "one_in": 8.3333
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 5,
           "pool_share": 0.2,
           "pool_share_percent": 20.0,
@@ -15930,12 +15936,12 @@
       "base_rarity_rate": 0.05,
       "base_rarity_rate_percent": 5.0,
       "biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Swamp"
       ],
       "best_biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River"
       ],
       "best_pool_size": 2,
@@ -15955,7 +15961,7 @@
           "one_in": 60.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -16029,7 +16035,7 @@
       "base_rarity_rate": 0.0004,
       "base_rarity_rate_percent": 0.04,
       "biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Swamp"
       ],
@@ -16054,15 +16060,15 @@
         },
         {
           "biome": "Swamp",
-          "pool_size": 2,
-          "pool_share": 0.5,
-          "pool_share_percent": 50.0,
-          "overall_rate": 0.0002,
-          "overall_rate_percent": 0.02,
-          "one_in": 5000.0
+          "pool_size": 3,
+          "pool_share": 0.333333333333,
+          "pool_share_percent": 33.3333333333,
+          "overall_rate": 0.000133333333,
+          "overall_rate_percent": 0.0133333333,
+          "one_in": 7500.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 3,
           "pool_share": 0.333333333333,
           "pool_share_percent": 33.3333333333,
@@ -17163,14 +17169,14 @@
       "biomes": [
         "Bamboo Jungle",
         "Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Sparse Jungle",
         "Swamp"
       ],
       "best_biomes": [
         "Bamboo Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Sparse Jungle"
       ],
@@ -17218,7 +17224,7 @@
           "one_in": 20.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -17292,10 +17298,12 @@
       "base_rarity_rate": 0.0004,
       "base_rarity_rate_percent": 0.04,
       "biomes": [
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp",
+        "Swamp"
       ],
       "best_biomes": [
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp",
+        "Swamp"
       ],
       "best_pool_size": 3,
       "best_pool_share": 0.333333333333,
@@ -17305,7 +17313,16 @@
       "best_one_in": 7500.0,
       "biome_details": [
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
+          "pool_size": 3,
+          "pool_share": 0.333333333333,
+          "pool_share_percent": 33.3333333333,
+          "overall_rate": 0.000133333333,
+          "overall_rate_percent": 0.0133333333,
+          "one_in": 7500.0
+        },
+        {
+          "biome": "Swamp",
           "pool_size": 3,
           "pool_share": 0.333333333333,
           "pool_share_percent": 33.3333333333,
@@ -19146,12 +19163,12 @@
         },
         {
           "biome": "Swamp",
-          "pool_size": 2,
-          "pool_share": 0.5,
-          "pool_share_percent": 50.0,
-          "overall_rate": 0.0002,
-          "overall_rate_percent": 0.02,
-          "one_in": 5000.0
+          "pool_size": 3,
+          "pool_share": 0.333333333333,
+          "pool_share_percent": 33.3333333333,
+          "overall_rate": 0.000133333333,
+          "overall_rate_percent": 0.0133333333,
+          "one_in": 7500.0
         },
         {
           "biome": "Jungle",
@@ -20779,7 +20796,7 @@
       "biomes": [
         "Bamboo Jungle",
         "Lush Caves",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Sparse Jungle"
       ],
       "best_biomes": [
@@ -20793,7 +20810,7 @@
       "best_one_in": 5.0,
       "biome_details": [
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 5,
           "pool_share": 0.2,
           "pool_share_percent": 20.0,
@@ -20838,12 +20855,12 @@
       "biomes": [
         "Badlands",
         "Eroded Badlands",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Swamp"
       ],
       "best_biomes": [
         "Eroded Badlands",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ],
       "best_pool_size": 2,
       "best_pool_share": 0.5,
@@ -20880,7 +20897,7 @@
           "one_in": 40.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -21927,7 +21944,7 @@
       "biomes": [
         "Bamboo Jungle",
         "Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Swamp"
       ],
@@ -21970,7 +21987,7 @@
           "one_in": 6.6667
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 5,
           "pool_share": 0.2,
           "pool_share_percent": 20.0,
@@ -22838,7 +22855,7 @@
         "Badlands",
         "Bamboo Jungle",
         "Lush Caves",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Sparse Jungle"
       ],
       "best_biomes": [
@@ -22871,7 +22888,7 @@
           "one_in": 5.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 5,
           "pool_share": 0.2,
           "pool_share_percent": 20.0,
@@ -23716,7 +23733,7 @@
         "Dripstone Caves",
         "Forest",
         "Lush Caves",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Stony Shore",
         "Swamp"
       ],
@@ -23786,7 +23803,7 @@
           "one_in": 8.3333
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 5,
           "pool_share": 0.2,
           "pool_share_percent": 20.0,
@@ -23884,7 +23901,7 @@
       "biomes": [
         "Dark Forest",
         "Lush Caves",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Pale Garden",
         "Swamp"
       ],
@@ -23926,7 +23943,7 @@
           "one_in": 20.0
         },
         {
-          "biome": "Mangrove Swamp Swamp",
+          "biome": "Mangrove Swamp",
           "pool_size": 2,
           "pool_share": 0.5,
           "pool_share_percent": 50.0,
@@ -27948,34 +27965,18 @@
       }
     },
     "Mangrove Swamp": {
-      "total_fish": 1,
-      "rarities_present": [
-        "Platinum"
-      ],
-      "single_fish_rarities": [
-        "Platinum"
-      ],
-      "rarity_stats": {
-        "Platinum": {
-          "fish_count": 1,
-          "base_rarity_rate": 0.002,
-          "base_rarity_rate_percent": 0.2,
-          "target_share_if_single_fish": true,
-          "best_possible_pool_share": 1.0,
-          "best_possible_pool_share_percent": 100.0
-        }
-      }
-    },
-    "Mangrove Swamp Swamp": {
-      "total_fish": 14,
+      "total_fish": 15,
       "rarities_present": [
         "Bronze",
         "Silver",
         "Gold",
         "Diamond",
+        "Platinum",
         "Mythical"
       ],
-      "single_fish_rarities": [],
+      "single_fish_rarities": [
+        "Platinum"
+      ],
       "rarity_stats": {
         "Bronze": {
           "fish_count": 5,
@@ -28008,6 +28009,14 @@
           "target_share_if_single_fish": false,
           "best_possible_pool_share": 0.5,
           "best_possible_pool_share_percent": 50.0
+        },
+        "Platinum": {
+          "fish_count": 1,
+          "base_rarity_rate": 0.002,
+          "base_rarity_rate_percent": 0.2,
+          "target_share_if_single_fish": true,
+          "best_possible_pool_share": 1.0,
+          "best_possible_pool_share_percent": 100.0
         },
         "Mythical": {
           "fish_count": 3,
@@ -29413,7 +29422,7 @@
       }
     },
     "Swamp": {
-      "total_fish": 17,
+      "total_fish": 18,
       "rarities_present": [
         "Bronze",
         "Silver",
@@ -29465,12 +29474,12 @@
           "best_possible_pool_share_percent": 50.0
         },
         "Mythical": {
-          "fish_count": 2,
+          "fish_count": 3,
           "base_rarity_rate": 0.0004,
           "base_rarity_rate_percent": 0.04,
           "target_share_if_single_fish": false,
-          "best_possible_pool_share": 0.5,
-          "best_possible_pool_share_percent": 50.0
+          "best_possible_pool_share": 0.333333333333,
+          "best_possible_pool_share_percent": 33.3333333333
         }
       }
     },
@@ -30406,7 +30415,7 @@
     "Boss Bass": {
       "rarity": "Diamond",
       "best_biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Mushroom Fields",
         "River",
         "Stony Shore",
@@ -30458,7 +30467,7 @@
       "best_biomes": [
         "Birch Forest",
         "Forest",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Windswept Forest"
       ],
       "best_pool_size": 2,
@@ -30470,7 +30479,7 @@
       "rarity": "Bronze",
       "best_biomes": [
         "Beach",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "Plains",
         "Stony Shore",
         "Swamp"
@@ -30550,7 +30559,7 @@
     "Colossal Catfish": {
       "rarity": "Gold",
       "best_biomes": [
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River"
       ],
       "best_pool_size": 2,
@@ -30783,7 +30792,7 @@
       "rarity": "Silver",
       "best_biomes": [
         "Bamboo Jungle",
-        "Mangrove Swamp Swamp",
+        "Mangrove Swamp",
         "River",
         "Sparse Jungle"
       ],
@@ -30805,7 +30814,8 @@
     "Enigmatic Dapper": {
       "rarity": "Mythical",
       "best_biomes": [
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp",
+        "Swamp"
       ],
       "best_pool_size": 3,
       "best_overall_rate": 0.000133333333,
@@ -31436,7 +31446,7 @@
       "rarity": "Gold",
       "best_biomes": [
         "Eroded Badlands",
-        "Mangrove Swamp Swamp"
+        "Mangrove Swamp"
       ],
       "best_pool_size": 2,
       "best_overall_rate": 0.025,
@@ -34328,17 +34338,6 @@
       }
     },
     "Mangrove Swamp": {
-      "Platinum": {
-        "pool_size": 1,
-        "fish": [
-          "Reaper Leviathan"
-        ],
-        "individual_rate": 0.002,
-        "individual_rate_percent": 0.2,
-        "individual_one_in": 500.0
-      }
-    },
-    "Mangrove Swamp Swamp": {
       "Bronze": {
         "pool_size": 5,
         "fish": [
@@ -34381,6 +34380,15 @@
         "individual_rate": 0.005,
         "individual_rate_percent": 0.5,
         "individual_one_in": 200.0
+      },
+      "Platinum": {
+        "pool_size": 1,
+        "fish": [
+          "Reaper Leviathan"
+        ],
+        "individual_rate": 0.002,
+        "individual_rate_percent": 0.2,
+        "individual_one_in": 500.0
       },
       "Mythical": {
         "pool_size": 3,
@@ -35789,14 +35797,15 @@
         "individual_one_in": 1000.0
       },
       "Mythical": {
-        "pool_size": 2,
+        "pool_size": 3,
         "fish": [
           "Confused Junior",
+          "Enigmatic Dapper",
           "Grunttin Leachy"
         ],
-        "individual_rate": 0.0002,
-        "individual_rate_percent": 0.02,
-        "individual_one_in": 5000.0
+        "individual_rate": 0.000133333333,
+        "individual_rate_percent": 0.0133333333,
+        "individual_one_in": 7500.0
       }
     },
     "Taiga": {
@@ -36413,7 +36422,7 @@
   },
   "server_statistics": {
     "fish_count": 190,
-    "biome_count": 68,
+    "biome_count": 67,
     "rarity_rates_total": 0.8124,
     "rarity_rates_total_percent": 81.24,
     "rarity_summary": {
@@ -36657,5 +36666,26 @@
     "warnings": [],
     "error_count": 0,
     "warning_count": 0
+  },
+  "biome_corrections_applied": {
+    "Swap": "Swamp",
+    "Peach": "Beach",
+    "Windswept Gravely Hills": "Windswept Gravelly Hills",
+    "ice Spikes": "Ice Spikes",
+    "Deep dark": "Deep Dark",
+    "Stony shore": "Stony Shore",
+    "The end": "The End",
+    "Badladns": "Badlands",
+    "Old Growth Brich Forest": "Old Growth Birch Forest",
+    "Frozen Rivers": "Frozen River",
+    "nether Wastes": "Nether Wastes",
+    "Chery Grove": "Cherry Grove",
+    "Mushroom Forest": "Mushroom Fields",
+    "Mangrove": "Mangrove Swamp",
+    "Sparse jungle": "Sparse Jungle",
+    "old Growth Birch Forest": "Old Growth Birch Forest",
+    "old Growth Pine Taiga": "Old Growth Pine Taiga",
+    "old Growth Spruce Taiga": "Old Growth Spruce Taiga",
+    "Deep cold Ocean": "Deep Cold Ocean"
   }
 }

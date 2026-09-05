@@ -129,16 +129,29 @@ function Delivery({ data }) {
 		)))
 	}
 
-	const addFish = (event) => {
-		event.preventDefault()
-		if (!selectedFish || activeDelivery.targets.includes(selectedFish)) return
+	const addFish = (fishName) => {
+		if (!fishName || activeDelivery.targets.includes(fishName)) return
 		setDeliveries((current) => current.map((delivery) => (
 			delivery.id === activeDeliveryId
-				? { ...delivery, targets: [...delivery.targets, selectedFish] }
+				? { ...delivery, targets: [...delivery.targets, fishName] }
 				: delivery
 		)))
 		setSelectedFish('')
 	}
+
+	const addFishFromInput = (event) => {
+		event.preventDefault()
+		const matchingFish = fish.find((entry) => entry.name.toLowerCase() === selectedFish.trim().toLowerCase())
+		if (matchingFish) addFish(matchingFish.name)
+	}
+
+	const filteredFishByRarity = fishByRarity.map((group) => ({
+		...group,
+		fish: group.fish.filter((entry) => (
+			!activeDelivery.targets.includes(entry.name)
+			&& entry.name.toLowerCase().includes(selectedFish.trim().toLowerCase())
+		)),
+	})).filter((group) => group.fish.length > 0)
 
 	const removeFish = (fishName) => {
 		setDeliveries((current) => current.map((delivery) => (
@@ -217,7 +230,7 @@ function Delivery({ data }) {
 				</aside>
 
 				<div className="delivery-workspace">
-				<form className="delivery-form" onSubmit={addFish}>
+				<form className="delivery-form" onSubmit={addFishFromInput}>
 					<div className="delivery-form__heading">
 						<span className="form-step">01</span>
 						<div>
@@ -234,21 +247,35 @@ function Delivery({ data }) {
 					</label>
 					<div className="fish-picker">
 						<label htmlFor="fish-select">Fish target</label>
-						<div>
-							<select id="fish-select" value={selectedFish} onChange={(event) => setSelectedFish(event.target.value)}>
-								<option value="">Choose a fish...</option>
-								{fishByRarity.map((group) => (
-									<optgroup label={`${group.rarity} (${group.fish.length})`} key={group.rarity}>
+						<input
+							id="fish-select"
+							value={selectedFish}
+							placeholder="Search fish by name..."
+							autoComplete="off"
+							onChange={(event) => setSelectedFish(event.target.value)}
+							onKeyDown={(event) => {
+								if (event.key === 'Enter' && filteredFishByRarity[0]?.fish[0]) {
+									event.preventDefault()
+									addFish(filteredFishByRarity[0].fish[0].name)
+								}
+							}}
+						/>
+						{selectedFish.trim() && (
+							<div className="fish-picker__suggestions" role="listbox" aria-label="Fish suggestions">
+								{filteredFishByRarity.length === 0 ? (
+									<p>No fish found</p>
+								) : filteredFishByRarity.map((group) => (
+									<div key={group.rarity}>
+										<strong>{group.rarity}</strong>
 										{group.fish.map((entry) => (
-											<option value={entry.name} key={entry.name} disabled={activeDelivery.targets.includes(entry.name)}>
-												{entry.name}{activeDelivery.targets.includes(entry.name) ? ' - added' : ''}
-											</option>
+											<button type="button" role="option" key={entry.name} onClick={() => addFish(entry.name)}>
+												{entry.name}
+											</button>
 										))}
-									</optgroup>
+									</div>
 								))}
-							</select>
-							<button type="submit">Add fish</button>
-						</div>
+							</div>
+						)}
 					</div>
 					<div className="target-list">
 						{targetFish.length === 0 && <p className="target-list__empty">Your fish targets will appear here.</p>}

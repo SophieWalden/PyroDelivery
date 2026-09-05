@@ -9,7 +9,7 @@ function App() {
   const [tab, setTab] = useState("fish")
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}pyrofishing_data.json`)
+    fetch(`${import.meta.env.BASE_URL}/pyrofishing_data.json`)
       .then((response) => response.json())
       .then((jsonData) => {
         setData(jsonData);
